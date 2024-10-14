@@ -10,7 +10,7 @@ The goal of this project is to build a machine learning model that predicts cust
 ## Project Goals
 - Predict Customer Churn: Develop an accurate machine learning model that predicts whether a customer will churn based on various input features.
   
-- Data Insights: Analyze the dataset to identify key factors influencing customer churn, helping stakeholders understand customer behavior.
+- Data Insights: Analyze the dataset to identify key factors influencing customer churn.
   
 - User-Friendly Interface: Create an intuitive and responsive web interface that allows users to easily input customer data for churn predictions.
   
