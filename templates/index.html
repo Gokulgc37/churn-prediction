@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="/static/style.css"> 
+
+</head>
+<body>
+    <div class="container">
+        <div class="info-box">
+            <h3>Information about input details</h3>
+            <div class="details">
+                <div class="detail">
+                    <p>Preferred login device</p>
+                    <ul>
+                        <li>Mobile phone -> 1</li>
+                        <li>Phone -> 2</li>
+                        <li>Computer -> 0</li>
+                    </ul>
+                </div>
+                <div class="detail">
+                    <p>Prefered Order Cat</p>
+                    <ul>
+                        <li>Laptop & Accessory -> 2</li>
+                        <li>Mobile -> 3</li>
+                        <li>Mobile Phone -> 4</li>
+                        <li>Others -> 5</li>
+                        <li>Grocery -> 1</li>
+                        <li>Fashion -> 0</li>
+                    </ul>
+                </div>
+                <div class="detail">
+                    <p>preferred payment mode</p>
+                    <ul>
+                        <li>Debit Card -> 4</li>
+                        <li>UPI -> 6</li>
+                        <li>CC -> 0</li>
+                        <li>Cash on Delivery -> 2</li>
+                        <li>E wallet -> 5</li>
+                        <li>COD -> 1</li>
+                        <li>Credit Card -> 3</li>
+                    </ul>
+                </div>
+                <div class="detail">
+                    <p>Gender</p>
+                    <ul>
+                        <li>Male -> 1</li>
+                        <li>Female -> 0</li>
+                    </ul>
+                </div>
+                <div class="detail">
+                    <p>Marital status</p>
+                    <ul>
+                        <li>Married -> 1</li>
+                        <li>Single -> 2</li>
+                        <li>Divorced -> 0</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h1>Customer Churn Prediction</h1>
+        <form id="prediction-form" onsubmit="makePrediction(event)">
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_1" class="number">Tenure</label>
+                    <input type="number" id="feature_1" class="input" name="feature_1" placeholder="Enter Tenure (1 to 100)" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_2" class="number">Preferred Login Device</label>
+                    <input type="number" id="feature_2" class="input" name="feature_2" placeholder="Enter preferred login device (preferred input details)" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_3" class="number">City Tier</label>
+                    <input type="number" id="feature_3" class="input" name="feature_3" placeholder="Enter city tier (1, 2, or 3)" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_4" class="number">Warehouse To Home</label>
+                    <input type="number" id="feature_4" class="input" name="feature_4" placeholder="Enter Warehouse To Home" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_5" class="number">Preferred Payment Mode</label>
+                    <input type="number" id="feature_5" class="input" name="feature_5" placeholder="Enter Preferred Payment Mode (preferred input details)" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_6" class="number">Gender</label>
+                    <input type="number" id="feature_6" class="input" name="feature_6" placeholder="Enter Gender(preferred input details)" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_7" class="number">Hours Spend On App</label>
+                    <input type="number" id="feature_7" class="input" name="feature_7" placeholder="Enter hours spent on app" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_8" class="number">Number Of Device Registered</label>
+                    <input type="number" id="feature_8" class="input" name="feature_8" placeholder="Enter Number Of Device Registered" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_9" class="number">Prefered Order Cat</label>
+                    <input type="number" id="feature_9" class="input" name="feature_9" placeholder="Enter Prefered Order Cat(preferred input details)" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_10" class="number">Satisfaction Score</label>
+                    <input type="number" id="feature_10" class="input" name="feature_10" placeholder="Enter Satisfaction Score" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_11" class="number">Marital Status</label>
+                    <input type="number" id="feature_11" class="input" name="feature_11" placeholder="Enter Marital Status(preferred input details)" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_12" class="number">Number Of Address</label>
+                    <input type="number" id="feature_12" class="input" name="feature_12" placeholder="Enter Number Of Address" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_13" class="number">Complain</label>
+                    <input type="number" id="feature_13" class="input" name="feature_13" placeholder="Enter Complain" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_14" class="number">OrderAmount Hike From last Year</label>
+                    <input type="number" id="feature_14" class="input" name="feature_14" placeholder="Enter OrderAmount Hike From last Year" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_15" class="number">Coupon Used</label>
+                    <input type="number" id="feature_15" class="input" name="feature_15" placeholder="Enter Coupon Used" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_16" class="number">Order Count</label>
+                    <input type="number" id="feature_16" class="input" name="feature_16" placeholder="Enter Order Count" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="feature_17" class="number">Day Since Last Order</label>
+                    <input type="number" id="feature_17" class="input" name="feature_17" placeholder="Enter Day Since Last Order" required>
+                </div>
+                <div class="form-group">
+                    <label for="feature_18" class="number">Cashback Amount</label>
+                    <input type="number" id="feature_18" class="input" name="feature_18" placeholder="Enter Cashback Amount" required>
+                </div>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        <br>
+        <div id="result"></div>
+        <script src="/static/script.js"></script>
+        
+    </div>
+</body>
+</html>
