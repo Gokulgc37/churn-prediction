@@ -13,23 +13,23 @@ It utilizes FastAPI for the backend, HTML and CSS for the frontend.
 
 - Create a project directory:
   ```bash
-   `mkdir movie-recommendation-system`
-   `cd movie-recommendation-system`
+   `mkdir churn-prediction`
+   `cd churn-prediction`
   ```
    
 - Create the necessary directories and files:  
    mkdir templates static data  
-   touch templates/home.html templates/result.html static/style.css data/movies.csv main.py requirements.txt README.md  
-   Add your HTML content to home.html, result.html, and your CSS styles to style.css. Populate movies.csv with your movie data.
+   touch templates/index.html static/style.css static/script.js data/E Commerce Dataset.xlsx main.py scaler.pkl random_forest_churnpredict_model.pkl requirements.txt README.md  
+   Add your HTML content to index.html and your CSS styles to style.css and script to script.js.
 
 - Open requirements.txt and add the following dependencies:  
   scikit-learn==1.4.2
-numpy
-pandas
-fastapi
-uvicorn
-jinja2
-pydantic
+  numpy
+  pandas
+  fastapi
+  uvicorn
+  jinja2
+  pydantic
 
 
 - Create a virtual environment and activate it:  
