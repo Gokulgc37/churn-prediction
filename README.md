@@ -53,10 +53,11 @@ This dataset contains :
 
 ## Technologies Used
 
-- **Backend:** FastAPI
+- **Backend:** FastAPI (for creating the API)
 - **Frontend:** HTML, CSS, JS
 - **Data Handling:** Pandas
 - **Machine Learning:** Scikit-learn
+- **Web Server:** Uvicorn (for serving the FastAPI application)
 
 ## Components
 1. **Jupyter Notebooks**
@@ -108,3 +109,8 @@ This dataset contains :
     ```
   - Input Customer Data: Fill in the input form with customer details.
   - Get Prediction: Click on the "Predict" button to see the result.
+
+## Future Work
+  - Deployment: Plan to deploy the application on a AWS cloud platform ensuring scalability and accessibility.
+  - Integration: Look into integrating the application with other services or APIs for a more robust user experience.
+  - Documentation: Improve documentation with deployment steps and user guides once the application is deployed.
