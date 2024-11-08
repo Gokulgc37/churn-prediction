@@ -111,6 +111,4 @@ This dataset contains :
   - Get Prediction: Click on the "Predict" button to see the result.
 
 ## Future Work
-  - Deployment: Plan to deploy the application on a AWS cloud platform ensuring scalability and accessibility.
   - Integration: Look into integrating the application with other services or APIs for a more robust user experience.
-  - Documentation: Improve documentation with deployment steps and user guides once the application is deployed.
